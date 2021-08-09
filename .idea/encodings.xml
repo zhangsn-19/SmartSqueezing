@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/hostProcessingLog/src/main/java/com/huawei/components/DoubleVolumChangeReceiver.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/hostProcessingLog/src/main/java/com/huawei/components/ShowRawdataContent.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hostProcessingLog/src/main/java/com/huawei/hostprocessinglog/CapDataActivity.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/hostProcessingLog/src/main/java/com/huawei/hostprocessinglog/THPActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/hostProcessingLog/src/main/java/com/huawei/shared/CmdOper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/hostProcessingLog/src/main/java/com/huawei/shared/FileOper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/hostProcessingLog/src/main/java/com/huawei/utility/DiffCanvasDraw.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/hostProcessingLog/src/main/java/com/huawei/utility/ProgressDialogTip.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/hostProcessingLog/src/main/java/com/huawei/utility/SuspendableThread.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/hostProcessingLog/src/main/java/huawei/components/SharedMainActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/hostProcessingLog/src/main/java/huawei/shared/CapData.java" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>

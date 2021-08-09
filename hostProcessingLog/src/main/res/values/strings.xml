@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">HostProcessingLog</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">HostProcessingLog</string>
+    <string name="title_version">V0.2.6/logtofile：</string>
+    <string name="no_config_file">Config.txt does not exist</string>
+    <string name="startlogging_tip">Logging...\npress VOL UP KEY to stop log</string>
+    <string name="command_tip">按音量上键开关log\n按音量下键缓存log</string>
+    <string name="stoplogging_tip">Logging end, no need to rename file now\npress VOL UP KEY to start log again</string>
+    <string name="save_file_to">save file at：</string>
+    <string name="file_save_fail">save file faild!</string>
+    <string name="operate_cancel">Oper Cancel</string>
+    <string name="notHostProcessing">the screen of this phone is not HostProcessing</string>
+</resources>

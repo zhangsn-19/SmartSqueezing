@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Mon Aug 09 09:25:43 CST 2021
+0.baseType=DIRECTORY
+0.base=D\:\\2020autumn\\side-interaction-master\\side-interaction-master\\HostProcessingLog_app\\HostProcessingLog-master\\hostProcessingLog\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.path=classes.dex
+0.set=DEX
+count=1

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HostProcessingLog-master.iml" filepath="$PROJECT_DIR$/HostProcessingLog-master.iml" group="HostProcessingLog-master" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hostProcessingLog/HostProcessingLog-master.hostProcessingLog.iml" filepath="$PROJECT_DIR$/.idea/modules/hostProcessingLog/HostProcessingLog-master.hostProcessingLog.iml" group="HostProcessingLog-master/hostProcessingLog" />
+    </modules>
+  </component>
+</project>
