@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Built application files
 *.apk
 *.aar
@@ -84,14 +83,3 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
-=======
-*.ttt       # 忽略所有 .a 结尾的文件
-!lib.ttt    # 但 lib.a 除外
-/TODO     # 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
-.svn/
-gen/
-bin/
-MyPaintMrlin/    # 忽略 MyPaintMrlin/ 目录下的所有文件
-AndroidTest/
-doc/*.ggg # 会忽略 doc/notes.ggg 但不包括 doc/server/arch.ggg
->>>>>>> e8db938 (Init Repo)
