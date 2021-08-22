@@ -3,7 +3,10 @@ from dataclasses import (
   field
 )
 from typing import List
-from constant import PEAK_TROUGH, CONF_BETA, TIME_THRESHOLD, CONFIDENCE_HAMMING
+from constant import (
+    PEAK_TROUGH, CONF_BETA, TIME_THRESHOLD, CONFIDENCE_HAMMING_LOWER,
+    CONFIDENCE_HAMMING_LARGER, CONFIDENCE_HAMMING_UPPER, SPLIT
+)
 from mock import getPressMiddleDouble, getPressUpDouble, getPressDownDouble, getPressMiddleSingle, getPressUpSingle, getPressDownSingle
 from mock import getFuse
 import time as tm
@@ -395,7 +398,10 @@ def analyzeGroups(touchGroups: List[movementGroup] = None) -> bool:
             for t in Touches:
                 myTouch11[idx].append(t)
         # print("entering fakeCompare")
-        if(fakeCompare( myTouch11[idx], Touches ) < CONFIDENCE_HAMMING ):
+        record(Touches)
+        compare_answer = fakeCompare( myTouch11[idx], Touches )
+        if(compare_answer < CONFIDENCE_HAMMING_LOWER or 
+            CONFIDENCE_HAMMING_UPPER < compare_answer < CONFIDENCE_HAMMING_LARGER):
             result = True
         
             '''
@@ -572,7 +578,31 @@ def updateTrack(data: List[List[int]], currentGroups: List[spotGroup], time: int
                 totalAlive = currentAlive
 
 
+# Tool List
+def record(touches: List[touch]):
+    '''
+    The first is ground truth and the second is the string to be tested
+    '''
 
+    # print(touch_1)
+    
+    touches_2 = ""
+    t2 = [] # list of char
+    
+    i = 0
+    for t in touches:
+        costed = 0
+        while t.time - costed >= TIME_THRESHOLD:
+            t2.append('1')
+            i += 1
+            costed += TIME_THRESHOLD
+        t2.append('0')
+    
+    confidence = 0.0
+    touches_2 = "".join(t2)
+    with open("../processed_data/2class/" + SPLIT + ".txt", "a+") as f:
+        f.write("touches:" + str(touches_2) + "\n")
+    # print(touches_2)
     
 # Test Function
 
@@ -784,7 +814,7 @@ def test_near_0_1() -> bool:
     return analyzeGroups(touchGroups)
 
 # Main Function
-
+'''
 test_ground_truth()
 total_cnt_0_1 = 0
 total_cnt_0_2 = 0
@@ -812,3 +842,15 @@ for epoch in range(0, 200):
 print("------------------- total score ------------------")
 print("---" + str(total_cnt_ground) + " " + str(total_cnt_0_1) + " " + str(total_cnt_0_2) + " " + str(total_cnt_0_3) + " " + str(total_cnt_0_5) + " " + str(total_cnt_1_0) + " " + str(total_cnt_2_0) + "---")
 print("--------------------------------------------------")
+'''
+
+for epoch in range(0, 100):
+    if epoch % 100 == 1:
+        print(str(epoch))
+    test_lll()
+    test_lsl()
+    test_near_0_2()
+    test_near_0_3()
+    test_near_0_5()
+    test_near_1_0()
+    test_near_2_0()

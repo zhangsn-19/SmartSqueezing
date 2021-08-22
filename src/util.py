@@ -1,4 +1,5 @@
 from constant import INT_INF
+from typing import List
 def getNumofCommonSubstr(str1: str, str2: str):
     '''
     return str and int
@@ -51,3 +52,18 @@ def hamming(a, b) -> int:
     '''
     return bin(int(a) ^ int(b)).count("1")
 
+def padding(to_pad: List[int], padding: int) -> List[int]:
+    # print(len(to_pad))
+    if len(to_pad) > padding:
+        return to_pad[0: padding]
+    else:
+        pad_len = padding - len(to_pad)
+        for i in range(0, pad_len):
+            to_pad.append(-1)
+    return to_pad
+
+def float_(to_: List[int]) -> List[float]:
+    ans = []
+    for i in range(0, len(to_)):
+        ans.append(float(i))
+    return ans
